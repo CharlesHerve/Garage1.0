@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: Garage1.0, Configuration: Debug Any CPU ------
+1>  Garage1.0 -> C:\Users\chler\Desktop\TP-Lexicon\Garage1.0 (2)\Garage1.0 (2)\Garage1.0\Garage1.0\bin\Debug\Garage1.0.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

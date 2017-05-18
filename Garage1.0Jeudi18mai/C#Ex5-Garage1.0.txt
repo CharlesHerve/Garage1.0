@@ -1,0 +1,93 @@
+C # Exercise 5 - Garage 1.0
+Note - The result of the exercise should be shown to the teacher 
+and approved before it can be considered completed.
+
+A first overall project in order to link much of what you have learned, 
+then we are going to build one garage application. 
+This application should provide the functionality 
+as one systems may need to be used to simulate a single garage.
+-It should therefore be possible 
+-to park a vehicle,	//Garage 
+-pick up a vehicle, 	
+-look for the vehicles there, 
+-and what characteristics they have. 
+-All this in a console application with main menu and submenus.
+
+The reason you're going to program a garage is that it's easy 
+to anchor the split as a whole.
+We can mainly divide a garage into the following parts:
+
+GARAGE: 
+A representation of the building itself. 
+The garage is a place where a lot of vehicles can be stored. 
+The garage can thus be represented as a collection of vehicles.
+
+VEHICULES:
+Cars, motorcycles, wheelchairs or whatever type of vehicle 
+you want to set up in garage.
+
+These are the two "object types" that you see in a physical garage. 
+But if we look closer, there should also be subclasses for vehicles, 
+meaning that each vehicle type is its own subclass in the system. 
+In addition to this, it requires FUNCTIONALITIES: 
+that allows vehicles to be placed in the garage, 
+that vehicles can be taken out of the garage, 
+and that we can get a presentation of what is in the garage 
+and search for it..
+
+In more programming-friendly terms we should therefore have:
+
+A collection of Vehicles; Garage Class .
+A vehicle class, the Vehicle class .
+A number of subclasses for vehicles.
+A UI (User Interface) that allows us to use the functionality 
+  of the garage additional Tasks.
+
+BONUS: 
+For those who have a little more (recommended):
+You can abstract a layer so that there is no direct contact between the UI and Garage class. 
+Thus, you create another class that manages the functionality 
+that the UI only  calls and fits information to.
+
+BONUS: For those who still have time left:
+You can use C # to write and read other files in the file system from your application. 
+Find out how to save your garage (via menu or auto shutdown) 
+and load your garage (via menu or automatically at start of application).
+
+*****Requirement Specification******
+OK A generic collection of vehicles: Class Garage <T>, where:
+	OK T should be limited to Vehicle objects, ie where T: Vehicle
+	OK Possibility of foreach-loop on the garage; Garage implements the generic version of the IEnumerable interface, ie:
+           IEnumerable <T> (ICollections<T>?)
+	OK Garage should not inherit from any other class, or implement anything other interface than IEnumerable
+	OK The collection of vehicles must be handled internally in the class as an array, ie: Vehicle [].
+	OK Possibility to list all vehicles in the garage.
+	? Possibility to list all types of vehicles in the garage and how many
+	  of those in the garage
+        ? Possibility to add(park) and remove vehicles from the garage
+        OK-A capacity required as an input parameter when installing a new arage.
+        ? Possibility to search for a specific vehicle via Reg-nr.
+        ? Ability to search for multiple vehicles on a number of optional variables
+          (ie:Brand, Model, Color?).
+? Different vehicles, the Class Vehicle and its subclasses:
+        OKVehicle contains all variables that should be present in all
+          vehicle types. For example. Reg No., Color, Number of wheels... 
+          And other variables you can think of(ie:Brand, Model).
+        OK There must be at least the following subclasses:
+		Airplane
+		Motorcycle
+		Car
+		Bus
+		Boat
+	OK These must contain at least one own attribute, eg:
+		¦ Number of Engines
+		¦ Cylinder volume
+		¦ Fuel type (Gasoline / Diesel)
+		¦ Number of seats
+		¦ Length
+? A text-based UI for a console application:
+	? It should be possible to navigate to ALL functionality from the garage through the UI
+	? It should be possible to create a Garage in the UI.
+	? It should be possible to turn off the application from the UI
+? The application should be incorrectly crashed in case of 
+  incorrect or unexpected input / output.
